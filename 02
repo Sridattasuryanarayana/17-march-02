@@ -1,0 +1,16 @@
+assignment2
+length=lower=upper=digit=False
+n=input('Enter the password: ')
+if len(n)>=8:
+    length=True 
+    for letter in n:
+        if letter.islower():
+            lower=True
+        elif letter.isupper():
+            upper=True
+        elif letter.isdigit():
+            digit=True
+if length and lower and upper and digit:
+    print('That is a valid password.')
+else:
+    print('That password is not valid.')
